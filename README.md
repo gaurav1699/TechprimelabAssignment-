@@ -8,7 +8,7 @@ password :- admin
 1. go to Frontend/src/app folder
 2. on terminal/cmd type --> npm install
 3. it will install all dependancies
-4. now run --> serve
+4. now run --> np serve
 
 # backend
 1. go to Backend/ folder
