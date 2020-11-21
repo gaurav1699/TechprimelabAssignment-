@@ -1,0 +1,215 @@
+.container{
+    justify-content: center;
+    align-items: center;
+    background: hsl(266, 15%, 91%);
+    
+
+    .navbar{
+       
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        .username{
+            margin-left: 10px;
+            font-size: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+        .nav1{
+            background-color: #eec0c6;
+            background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+            display: flex;
+            align-items: center;
+            padding-left:10px; 
+            padding-right: 10px;
+            width: 100%;
+            height: auto;
+        }
+        .nav2{
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            padding-left:10px; 
+            padding-right: 10px;
+            width: 100%;
+            height: auto;
+            .btn{
+                border-radius: 10px;
+                background-color: rgb(240, 231, 231);
+                color:black;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 8px 20px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-left: auto;
+                height: fit-content;
+            }
+            .noleftmarging{
+                margin-left: 10px;
+            }
+        }
+        
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Montserrat', sans-serif;
+        height: 80vh;
+        padding-left: 250px;
+        
+        .add-product{
+            width: 70%;
+            .form{
+                align-items: center;
+                flex-direction: column;
+                flex-grow: 1;
+                label{
+                    color: #B4886B;
+                    font-weight: bold;
+                    display: block;
+                    width: 150px;
+                    float: left;
+                    }
+                .input{
+                    background-color: white;
+                    border: none;
+                    padding: 12px 15px;
+                    margin: 8px 0;
+                    width: 95%;
+                }
+                p {
+                    font-weight: bold;
+                    margin: 0;
+                    font-size: 30px;
+                    color: black;
+                    text-align: center;
+                    padding: 3px;
+                }
+                
+                   
+                select{
+                    width: 99%;
+                    padding: 10px;
+                    background-color: #ffffff;
+                    color: #000;
+                    border: .1px solid rgb(139, 139, 139);
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+    .table-container{
+        margin-top: 40px;
+        padding-left: 140px;
+        .table{
+            border-radius: 10px;
+            
+            width: 80%;
+            table-layout: fixed;
+            font-size: 17px;
+            .head{
+                border-bottom: 0.5px solid grey;
+                margin-bottom: 10px;
+                th{
+                    text-align: left;
+                    background: rgba(9, 53, 88, 0.349); 
+                    color: white; 
+                    font-weight: bold;
+                    font-style: inherit;
+                }
+            }
+            tr:nth-of-type(odd) { 
+                background: #eee; 
+              }
+            tr{
+                .definer{
+                    display: flex;
+                    align-items: center;
+                   
+                    .checkmark {
+                        display:inline-block;
+                        width: 22px;
+                        height:22px;
+                        -ms-transform: rotate(45deg); /* IE 9 */
+                        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+                        transform: rotate(45deg);
+                    }
+                    
+                    .checkmark_circle {
+                        position: absolute;
+                        width:22px;
+                        height:22px;
+                        background-color: green;
+                        border-radius:11px;
+                        left:0;
+                        top:0;
+                    }
+                    
+                    .checkmark_stem {
+                        position: absolute;
+                        width:3px;
+                        height:9px;
+                        background-color:#fff;
+                        left:11px;
+                        top:6px;
+                    }
+                    
+                    .checkmark_kick {
+                        position: absolute;
+                        width:3px;
+                        height:3px;
+                        background-color:#fff;
+                        left:8px;
+                        top:12px;
+                    }
+                    
+                    .inactive {
+                        display:inline-block;
+                        width: 22px;
+                        height:22px;
+                        -ms-transform: rotate(45deg); /* IE 9 */
+                        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+                        transform: rotate(45deg);
+                    }
+                    
+                    .checkmark_circle_c {
+                        position: absolute;
+                        width:22px;
+                        height:22px;
+                        background-color: red;
+                        border-radius:11px;
+                        left:0;
+                        top:0;
+                    }
+                    
+                    .checkmark_stem1 {
+                        position: absolute;
+                        width:3px;
+                        height:13px;
+                        background-color:#fff;
+                        left:10px;
+                        top:5px;
+                    }
+                    
+                    .checkmark_kick1 {
+                        position: absolute;
+                        width:12px;
+                        height:3px;
+                        background-color:#fff;
+                        left:5px;
+                        top:10px;
+                    }
+                }
+            }
+            td, th { 
+                padding: 6px; 
+                border: 1px solid #ccc; 
+                text-align: left; 
+              }
+        }
+    }
+}

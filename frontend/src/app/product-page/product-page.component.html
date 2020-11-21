@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="navbar">
+        <div class="nav1">
+        <p class="username">Welcome, {{username}}</p>
+    </div>
+    </div>
+    <br>
+    <div class="navbar">
+      <div class="nav2">
+        <button class="btn" (click)="addProduct()" *ngIf="!isAdd">Add New Product</button>
+        <button class="btn" (click)="saveProduct()" *ngIf="isAdd">Save</button>
+        <button class="btn noleftmarging" (click)="cancel()" *ngIf="isAdd">Cancel</button>
+    </div>
+</div>
+
+    <div class="table-container" *ngIf="!isAdd">
+        <table class="table" *ngIf="isDataAvailable">
+            <tr class='head'>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Active</th>
+            </tr>
+            <tr *ngFor="let product of products"> 
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.quantity}}</td>
+                <td>${{product.price}}</td>
+                <td class="definer">
+                    <span class="checkmark" *ngIf="product.status">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+
+                    <span class="inactive" *ngIf="!product.status">
+                        <div class="checkmark_circle_c"></div>
+                        <div class="checkmark_stem1"></div>
+                        <div class="checkmark_kick1"></div>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="box">
+    <div class="card">
+        <div class="add-product" *ngIf="isAdd">
+        <div class="form">
+            <p>ADD Product</p>
+            <label>Product Name</label>
+            <input class="input"  [(ngModel)]="name"/>
+            <label>Product Category</label>
+            <input class="input"  [(ngModel)]="category"/>
+            <label>Product Quantity</label>
+            <input class="input" type="number"  [(ngModel)]="quantity"/>
+            <label>Product Price</label>
+            <input class="input" type="number"  [(ngModel)]="price"/>
+            <label class="label">Product Status</label>
+            <select (change)="selectChange($event)">
+                <option value="true">Active</option>
+                <option value="false">Inactive</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+</div>
