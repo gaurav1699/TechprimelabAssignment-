@@ -1,6 +1,9 @@
 # TechprimelabAssignment-
 
 
+login id :- admin
+password :- admin
+
 # frontend
 1. go to Frontend/src/app folder
 2. on terminal/cmd type --> npm install
